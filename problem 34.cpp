@@ -12,13 +12,6 @@ string ReadText(string message)
 	return text;
 }
 
-char ReadChar(string message)
-{
-	char TheChar;
-	cout << message;
-	cin >> TheChar;
-	return TheChar;
-}
 
 bool IsVowel(char TheChar)
 {
