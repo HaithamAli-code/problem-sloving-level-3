@@ -12,7 +12,7 @@ string ReadString(string message)
 	return text;
 }
 
-string TrimLeft(string text)
+string TrimStringLeft(string text)
 {
 	for (int i = 0; i < text.length(); i++)
 	{
@@ -24,27 +24,27 @@ string TrimLeft(string text)
 	return  "";
 }
 
-string TrimRight(string text)
+string TrimStringRight(string text)
 {
-	for (int i = text.length(); i < 0; i++)
+	for (int i = text.length() -1 ; i >= 0; i--)
 	{
 		if (text[i] != ' ')
 		{
-			return text.substr(0, i + 1); 
+			return text.substr(0, i + 1);
 		}
 	}
-	return  "";
+	return "";
 }
 
 string Trim(string text)
 {
-	return  TrimLeft(TrimRight(text));
+	return (TrimStringLeft(TrimStringRight(text)));
 }
 
 int main()
 {
 	string text = ReadString("\nEnter Your String Please:\n");
 
-	cout << "\nTrim Left : " << TrimLeft(text) << endl;
-	cout << "\nTrim Right : " << TrimRight(text) << endl;
+	cout << "\nTrim Left : " << TrimStringLeft(text) << endl;
+	cout << "\nTrim Right : " << TrimStringRight(text) << endl;
 }
