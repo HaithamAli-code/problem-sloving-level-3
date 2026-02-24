@@ -34,7 +34,7 @@ sClient ReadClient()
 	return Client;
 }
 
-string ConvertRecordToLine(sClient Client , string Seperator = " #//# ")
+string ConvertRecordToLine(sClient Client , string Seperator = "#//#")
 {
 	string ConvertToLine = "";
 	ConvertToLine += Client.AccountNumber + Seperator;
