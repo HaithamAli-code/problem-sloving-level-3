@@ -50,8 +50,8 @@ sClient ConvertLineToRecord(string LineData , string Delimiter = "#//#")
 	sClient Client;
 
 
-	Client.AccountNumber = vClient[0];
-	Client.PinCode = vClient[1];
+	Client.PinCode = vClient[0];
+	Client.AccountNumber = vClient[1];
 	Client.Name = vClient[2];
 	Client.Phone = vClient[3];
 	Client.AccountBalance = stod(vClient[4]); // casting string to double 
